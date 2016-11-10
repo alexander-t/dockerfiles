@@ -5,12 +5,11 @@ RUN apt-get update && \
     apt-get -qy install \
 	ca-certificates \ 
 	curl \
-	docker.io \
 	git \ 
-	openssh-client \ 
-	oracle-java8-jdk \ 
-	unzip 
- 
+	oracle-java8-jdk 
+
+RUN curl -fsSL test.docker.com | sh
+
 # Jenkins
 RUN mkdir -p /usr/local/jenkins/plugins
 COPY jenkins.war /usr/local/jenkins
