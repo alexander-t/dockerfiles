@@ -69,6 +69,9 @@ wget -P plugins http://updates.jenkins-ci.org/latest/workflow-cps.hpi
 wget -P plugins http://updates.jenkins-ci.org/latest/workflow-cps-global-lib.hpi
 # Pipeline Multibranch Plugin
 wget -P plugins http://updates.jenkins-ci.org/latest/workflow-multibranch.hpi
+if [ "$?" -ne 0 ]; then
+        wget -P plugins http://archives.jenkins-ci.org/plugins/workflow-multibranch/latest/workflow-multibranch.hpi
+fi
 # Pipeline Plugin
 wget -P plugins http://updates.jenkins-ci.org/latest/workflow-aggregator.hpi
 
