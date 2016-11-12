@@ -1,4 +1,4 @@
-FROM resin/rpi-raspbian:jessie-20160831
+FROM resin/rpi-raspbian:jessie-20161102
 MAINTAINER Alexander Tarlinder <a@tarlinder.net>
 
 RUN apt-get update && \
@@ -6,7 +6,8 @@ RUN apt-get update && \
 	ca-certificates \ 
 	curl \
 	git \ 
-	oracle-java8-jdk 
+	oracle-java8-jdk \
+	wget
 
 RUN curl -fsSL test.docker.com | sh
 
@@ -17,6 +18,7 @@ ENV JENKINS_HOME /usr/local/jenkins
 COPY plugins/* /usr/local/jenkins/plugins/
 
 COPY docker_entrypoint.sh /
+COPY retrywget.sh /usr/local/jenkins
 
 EXPOSE 8080
 WORKDIR /usr/local/jenkins
