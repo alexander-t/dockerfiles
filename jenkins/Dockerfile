@@ -18,7 +18,6 @@ ENV JENKINS_HOME /usr/local/jenkins
 COPY plugins/* /usr/local/jenkins/plugins/
 
 COPY docker_entrypoint.sh /
-COPY retrywget.sh /usr/local/jenkins
 
 EXPOSE 8080
 WORKDIR /usr/local/jenkins
