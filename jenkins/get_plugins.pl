@@ -23,7 +23,7 @@ my @plugins = ("bouncycastle-api.hpi",
 	       "token-macro.hpi",
 	       "xunit.hpi", # xUnit Plugin
 	       "log-parser.hpi", # Log Parser Plugin
-	       "htmlpublisher.hpi" # HTML Publisher Plugin
+	       "htmlpublisher.hpi", # HTML Publisher Plugin
 	       "workflow-api.hpi", # Pipeline API Plugin
 	       "pipeline-stage-step.hpi", # Pipeline Stage Step Plugin
 	       "workflow-support.hpi", # Pipeline Supporting APIs Plugin
